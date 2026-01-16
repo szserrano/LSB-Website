@@ -24,12 +24,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" scroll-behavior="smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased sticky top-0 z-50`}
       >
         <Navbar />
-        {children}
+        <main className="pt-20">
+          {children}
+        </main>
       </body>
     </html>
   );
