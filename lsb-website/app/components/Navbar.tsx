@@ -12,11 +12,12 @@ export default function Navbar() {
       <span className="text-2xl font-bold">Lucky Shot Billiards</span>
 
       <div className="flex items-center gap-4 text-gray-400">
-        <Link href="/" className="hover:text-white">Home</Link>
-        <Link href="#about" className="hover:text-white">About</Link>
-        <Link href="#hours" className="hover:text-white">Hours</Link>
-        <Link href="#contact" className="hover:text-white">Contact</Link>
-        <Link href="#prices" className="hover:text-white">Prices</Link>
+        <Link href="/" className="hover:text-black">Home</Link>
+        <Link href="#about" className="hover:text-black">About</Link>
+        <Link href="#hours" className="hover:text-black">Hours</Link>
+        <Link href="#tournaments" className="hover:text-black">Tournaments</Link>
+        <Link href="#contact" className="hover:text-black">Contact</Link>
+        <Link href="#prices" className="hover:text-black">Prices</Link>
       </div>
     </nav>
   );
