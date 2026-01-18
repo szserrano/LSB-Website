@@ -1,4 +1,5 @@
 import Image from "next/image";
+import MapSection from "./components/MapSection";
 
 export default function Home() {
   return (
@@ -31,11 +32,12 @@ export default function Home() {
           <p className="text-white text-center max-w-2xl">Tournament format is 8-ball with a $500 prize pool.</p>
         </div>
       </section>
-      <section id="contact" className="min-h-screen w-full bg-white flex items-center justify-center">
+      <section id="contact" className="min-h-screen w-full bg-white flex items-center justify-center gap-6">
         <div className="flex flex-col items-center justify-center gap-6">
           <h1 className="text-black text-4xl font-bold">Contact Us</h1>
           <p className="text-black text-center max-w-2xl">Give us a call at (408) 739-7665 and we'll be happy to help you with any questions you may have.</p>
           <p className="text-black text-center max-w-2xl">You can also find us on Instagram at <a href="https://www.instagram.com/luckyshotbilliards/" className="text-blue-500">https://www.instagram.com/luckyshotbilliards/</a>.</p>
+          <MapSection />
         </div>
       </section>
       <section id="prices" className="min-h-screen w-full bg-blue flex items-center justify-center">
