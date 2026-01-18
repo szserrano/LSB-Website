@@ -111,7 +111,7 @@ export default function Home() {
             </p>
             {/* Instagram link with better styling */}
             <div className="bg-red-900/50 backdrop-blur-sm rounded-xl p-6 shadow-md border border-red-700/50">
-              <p className="text-white/90 text-lg mb-3">Check out what's happening at Lucky Shot Billiards!</p>
+              <p className="text-white/90 text-lg mb-3">Keep up to date with what's happening at Lucky Shot Billiards!</p>
               <a 
                 href="https://www.instagram.com/luckyshotbilliards/" 
                 className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold" 
