@@ -12,7 +12,7 @@ export default function Home() {
       <section id="about" className="min-h-screen w-full bg-slate-500 flex items-center justify-center">
         <div className="flex flex-col items-center justify-center gap-6">
           <h1 className="text-white text-4xl font-bold">About Us</h1>
-          <p className="text-white text-center max-w-2xl">Lucky Shot Billiards is a family-owned and operated billiards club proudly serving Sunnyvale, California for over 25 years. We are a proud member of the Billiards Congress of America (BCA) and the American Poolplayers Association (APA).</p>
+          <p className="text-white text-center max-w-2xl">Lucky Shot Billiards is a family-owned and operated billiards club proudly serving Sunnyvale, California for over 20 years. We are a proud member of the Billiards Congress of America (BCA) and the American Poolplayers Association (APA).</p>
           <p className="text-white text-center max-w-2xl">We are a billiards club with a selection of snacks and drinks. We have a selection of 14 9-foot pool tables available for use, along with a 7-foot pool table available paired with a dartboard in a more private area. Feel free to queue up some tunes using our TouchTunes jukebox!</p>
         </div>
       </section>
@@ -36,7 +36,8 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center gap-6">
           <h1 className="text-black text-4xl font-bold">Contact Us</h1>
           <p className="text-black text-center max-w-2xl">Give us a call at (408) 739-7665 and we'll be happy to help you with any questions you may have.</p>
-          <p className="text-black text-center max-w-2xl">You can also find us on Instagram at <a href="https://www.instagram.com/luckyshotbilliards/" className="text-blue-500">https://www.instagram.com/luckyshotbilliards/</a>.</p>
+          <p className="text-black text-center max-w-2xl">Check out what's happening at Lucky Shot Billiards on our Instagram page <a href="https://www.instagram.com/luckyshotbilliards/" className="inline-block mt-6 px-6 py-3 border border-blue text-blue rounded-lg hover:bg-black hover:text-black transition" target="_blank">https://www.instagram.com/luckyshotbilliards/</a></p>
+          <p className="text-black text-center max-w-2xl">Stop by and see us in person!</p>
           <MapSection />
         </div>
       </section>
