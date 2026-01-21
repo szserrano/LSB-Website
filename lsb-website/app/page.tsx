@@ -86,7 +86,7 @@ export default function Home() {
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 shadow-lg mt-4">
               <h3 className="text-yellow-400 font-bold text-xl mb-2">Format</h3>
-              <p className="text-white text-lg">8-ball/9-ball tournament</p>
+              <p className="text-white text-lg">8-ball and 9-ball tournaments alternating each week</p>
             </div>
           </div>
         </div>
@@ -130,7 +130,9 @@ export default function Home() {
       <section id="prices" className="min-h-screen w-full bg-gradient-to-br from-slate-900 to-gray-950 flex items-center justify-center py-20 px-4">
         <div className="text-center">
           <h1 className="text-white text-5xl md:text-6xl font-bold mb-3">Prices</h1>
-          <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full mb-8"></div>
+          <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full mb-8">
+            <Image src="/lsbmenu.webp" alt="menu" width={10000} height={10000} className="rounded-xl shadow-2xl border-4 border-gray-200" />
+          </div>
           <p className="text-white/90 text-xl">Pricing information coming soon!</p>
         </div>
       </section>
