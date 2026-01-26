@@ -126,14 +126,32 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Prices Section - Dark background matching other sections */}
-      <section id="prices" className="min-h-screen w-full bg-gradient-to-br from-slate-900 to-gray-950 flex items-center justify-center py-20 px-4">
-        <div className="text-center">
-          <h1 className="text-white text-5xl md:text-6xl font-bold mb-3">Prices</h1>
-          <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full mb-8">
-            <Image src="/lsbmenu.webp" alt="menu" width={10000} height={10000} className="rounded-xl shadow-2xl border-4 border-gray-200" />
+      {/* Prices Section - Menu background image covering full screen */}
+      <section id="prices" className="relative w-full bg-cover bg-center bg-fixed flex items-start justify-center pt-32 pb-20 px-4"
+      style={{ 
+        backgroundImage: "url('/lsbmenupic.jpeg')",
+        minHeight: "100vh"
+      }}
+      >
+        {/* Subtle overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/30"></div>
+        {/* Content container - allows scrolling to see all menu items */}
+        <div className="relative z-10 w-full max-w-4xl text-center">
+          <h1 className="text-white text-5xl md:text-6xl font-bold mb-3 drop-shadow-2xl">Prices</h1>
+          <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full mb-8"></div>
+          {/* Menu content area with semi-transparent background for readability */}
+          <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-2xl border border-white/20">
+          <p className="text-white/90 text-lg drop-shadow-lg">Scroll to see all menu items and house rules</p>
+            <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Hot Dogs.. $6.00</p>
+            <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Corn Dogs.. $6.00</p>
+            <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Chicken Bake.. $6.00</p>
+            <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Nachos.. $6.00</p>
+            <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Cup of Noodles.. $6.00</p>
+            {/* This container will expand to show all menu content as you add it */}
+            <div className="mt-8 space-y-4">
+              {/* Add your menu items and house rules here */}
+            </div>
           </div>
-          <p className="text-white/90 text-xl">Pricing information coming soon!</p>
         </div>
       </section>
     </div>
