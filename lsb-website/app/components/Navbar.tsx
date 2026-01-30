@@ -47,16 +47,16 @@ export default function Navbar() {
           Tournaments
         </Link>
         <Link 
-          href="#contact" 
-          className="px-3 py-2 rounded-lg hover:bg-white/20 hover:text-white transition-all duration-200 font-medium"
-        >
-          Contact
-        </Link>
-        <Link 
           href="#prices" 
           className="px-3 py-2 rounded-lg hover:bg-white/20 hover:text-white transition-all duration-200 font-medium"
         >
           Prices
+        </Link>
+        <Link 
+          href="#contact" 
+          className="px-3 py-2 rounded-lg hover:bg-white/20 hover:text-white transition-all duration-200 font-medium"
+        >
+          Contact
         </Link>
       </div>
     </nav>
