@@ -5,14 +5,14 @@ export default function Home() {
   return (
     <div className="flex min-h-screen w-full flex-col items-center justify-center bg-zinc-50">
       {/* Hero Section - First impression of your site */}
-      <section id="home" className="relative min-h-screen w-full bg-cover bg-[center_center] flex items-center justify-center overflow-hidden"
+      <section id="home" className="relative min-h-screen w-full bg-cover bg-fixed bg-[center_center] flex items-center justify-center overflow-hidden"
       style={{ backgroundImage: "url('/lsb_alt.png')" }}
       >
         {/* Overlay for better text readability - darkens background slightly */}
         <div className="absolute inset-0 bg-black/40"></div>
         {/* Text container with better styling */}
         <div className="relative z-10 px-6 text-center">
-          <h1 className="text-white text-5xl md:text-6xl font-bold mb-4 drop-shadow-2xl">
+          <h1 className="text-white text-stroke-black text-stroke-5 text-5xl md:text-6xl font-bold mb-4 drop-shadow-2xl">
             Welcome to Lucky Shot Billiards
           </h1>
           <p className="text-white text-xl md:text-2xl font-light backdrop-blur-sm bg-white/10 px-6 py-3 rounded-lg inline-block">
@@ -28,6 +28,8 @@ export default function Home() {
             <h1 className="text-white text-5xl md:text-6xl font-bold mb-3">About Us</h1>
             <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
           </div>
+          {/* Image showing members of the 2025 Masters Champions */}
+          <Image src="/2025lsbmasterschamps.png" alt="Lucky Shot Billiards 2025 Masters Champions" width={1000} height={1000} className="rounded-lg shadow-2xl border-4 border-gray-200" />
           {/* Paragraphs with better spacing and readability */}
           <div className="space-y-6">
             <p className="text-white/90 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
@@ -69,6 +71,10 @@ export default function Home() {
             <h1 className="text-white text-5xl md:text-6xl font-bold mb-3">Tournaments</h1>
             <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
           </div>
+          <div className="flex items-center justify-center gap-8">
+          <Image src="/FridayNight8-Ball.png" alt="LSB Friday Night 8-Ball Tournament" width={300} height={300} className="rounded-lg shadow-2xl border-4 border-gray-200" />
+          <Image src="/FridayNight9-Ball.png" alt="LSB Friday Night 9-Ball Tournament" width={300} height={300} className="rounded-lg shadow-2xl border-4 border-gray-200" />
+          </div>
           <div className="space-y-6">
             <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
               We host weekly 8-ball/9-ball tournaments on Friday nights at 7:00 PM PST! More details per tournament will be posted on our Instagram page found in the contact section.
@@ -81,7 +87,7 @@ export default function Home() {
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 shadow-lg">
                 <h3 className="text-yellow-400 font-bold text-xl mb-2">Prize Pool</h3>
-                <p className="text-white text-2xl font-semibold">$500</p>
+                <p className="text-white text-2xl font-semibold">Depends on player count</p>
               </div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 shadow-lg mt-4">
@@ -91,8 +97,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* Contact Section - Dark red background like pool table felt */}
-      <section id="contact" className="min-h-screen w-full bg-gradient-to-br from-red-900 to-red-950 flex items-center justify-center py-20 px-4">
+      {/* Contact Section - Deep burgundy/red like pool table felt (darker than red-950) */}
+      <section id="contact" className="min-h-screen w-full bg-gradient-to-br from-red-950 to-[#880109] flex items-center justify-center py-20 px-4">
         <div className="flex flex-col items-center justify-center gap-8 max-w-4xl">
           <div className="text-center mb-4">
             <h1 className="text-white text-5xl md:text-6xl font-bold mb-3">Contact Us</h1>
@@ -100,7 +106,7 @@ export default function Home() {
           </div>
           <div className="space-y-6 text-center">
             {/* Phone number with icon-style emphasis */}
-            <div className="bg-red-900/50 backdrop-blur-sm rounded-xl p-6 shadow-md border border-red-700/50">
+            <div className="bg-red-950/50 backdrop-blur-sm rounded-xl p-6 shadow-md border border-red-800/50">
               <p className="text-white/90 text-lg mb-2">Give us a call!</p>
               <a href="tel:408-739-7665" className="text-yellow-400 text-2xl md:text-3xl font-bold hover:text-yellow-300 transition-colors">
                 (408) 739-7665
@@ -110,7 +116,7 @@ export default function Home() {
               We'll be happy to help you with any questions you may have.
             </p>
             {/* Instagram link with better styling */}
-            <div className="bg-red-900/50 backdrop-blur-sm rounded-xl p-6 shadow-md border border-red-700/50">
+            <div className="bg-red-950/50 backdrop-blur-sm rounded-xl p-6 shadow-md border border-red-800/50">
               <p className="text-white/90 text-lg mb-3">Keep up to date with what's happening at Lucky Shot Billiards!</p>
               <a 
                 href="https://www.instagram.com/luckyshotbilliards/" 
@@ -141,12 +147,36 @@ export default function Home() {
           <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full mb-8"></div>
           {/* Menu content area with semi-transparent background for readability */}
           <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-2xl border border-white/20">
-          <p className="text-white/90 text-lg drop-shadow-lg">Scroll to see all menu items and house rules</p>
+          <h1 className="text-white text-3xl md:text-4xl font-bold mb-4 drop-shadow-2xl">All Menu Items and House Rules</h1>
+          <h2 className="text-white text-3xl md:text-4xl font-bold italic underline mb-4 drop-shadow-2xl">Food</h2>
             <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Hot Dogs.. $6.00</p>
             <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Corn Dogs.. $6.00</p>
             <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Chicken Bake.. $6.00</p>
             <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Nachos.. $6.00</p>
             <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Cup of Noodles.. $6.00</p>
+          <h2 className="text-white text-3xl md:text-4xl font-bold italic underline mb-4 drop-shadow-2xl">Drinks</h2>
+            <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Water & Soda.. $2.00</p>
+            <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Sparkling Water.. $3.00</p>
+            <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Juice & Coffee.. $3.00</p>
+            <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Energy Drink.. $4.00</p>
+            <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Regular Beer.. $7.00</p>
+            <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Premium Beer.. $8.00</p>
+          <h2 className="text-white text-3xl md:text-4xl font-bold italic underline mb-4 drop-shadow-2xl">House Rules</h2>
+            <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Age limit of 16 years old to play pool.</p>
+            <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">No outside food or drinks allowed.</p>
+            <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">NO SMOKING OR VAPING.</p>
+            <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">No sitting on the pool table.</p>
+            <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">No Masse & Jump Shots.</p>
+            <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">NO BLUE CHALK.</p>
+            <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">$1k fine for table damage.</p>
+          <h2 className="text-white text-3xl md:text-4xl font-bold italic underline mb-4 drop-shadow-2xl">Hourly Rates</h2>
+            <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">1 Player.. $12.00</p>
+            <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">2 players.. $18.00</p>
+            <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">3 players.. $22.00</p>
+            <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">4 players.. $26.00</p>
+            <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">5 players.. $30.00</p>
+            <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">6 players.. $34.00</p>
+            <p className="text-white font-bold italic underline text-xl md:text-2xl drop-shadow-lg mb-4">* 1-Hour play minimum, 1/4 hour increments afterwards. *</p>
             {/* This container will expand to show all menu content as you add it */}
             <div className="mt-8 space-y-4">
               {/* Add your menu items and house rules here */}
