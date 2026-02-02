@@ -42,11 +42,16 @@ export default function Home() {
         </div>
       </section>
       {/* Hours Section - Olive green background like pool table felt */}
-      <section id="hours" className="min-h-screen w-full bg-gradient-to-br from-green-900 to-green-800 flex items-center justify-center pt-32 pb-20 px-4">
-        <div className="flex flex-col items-center justify-center gap-8 max-w-4xl">
+      <section id="hours" className="relative min-h-screen w-full bg-cover bg-fixed bg-[center_center] flex items-center justify-center overflow-hidden"
+      style={{ 
+        backgroundImage: "url('/lsbhall.jpg')",
+      }}
+      >
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="relative flex-col items-center justify-center gap-8 max-w-4xl">
           <div className="text-center mb-4">
-            <h1 className="text-white text-5xl md:text-6xl font-bold mb-3">Hours of Operation</h1>
-            <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
+            <h1 className="text-white text-5xl md:text-6xl font-bold mb-3 drop-shadow-2xl">Hours of Operation</h1>
+            <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full mb-8"></div>
           </div>
           {/* Card container with shadow for depth */}
           <div className="bg-green-900/50 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-2xl border border-green-700/50 w-full max-w-3xl">
