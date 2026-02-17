@@ -33,10 +33,17 @@ export default function Home() {
           {/* Paragraphs with better spacing and readability */}
           <div className="space-y-6">
             <p className="text-white/90 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
-              Lucky Shot Billiards is a family-owned and operated billiards club proudly serving Sunnyvale, California for over 20 years. We are a proud member of the Billiards Congress of America (BCA) and the American Poolplayers Association (APA).
+              Lucky Shot Billiards Est. 1996 is a family-owned and operated billiards club proudly serving Sunnyvale, California 
+              for over 20 years. Boasting as the premiere location for pool in the South Bay, we are a proud member of the 
+              Billiards Congress of America (BCA) and the American Poolplayers Association (APA).
+
+              Lucky Shot also hosts a weekly tournament every Friday night, as well as catering for private
+              and corporate events! Check our tournament and contact sections for more information.
             </p>
             <p className="text-white/90 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
-              We offer a selection of snacks and drinks, along with 14 9-foot pool tables available for use and a 7-foot pool table paired with a dartboard in a more private area. Feel free to queue up some tunes using our TouchTunes jukebox!
+              Equipped with a dozen competition tables, a light Deli menu, and a giant selection of import & domestic beers,
+              we are the prime spot for recreation and league play. We also have a 7-foot pool table paired with a dartboard 
+              in a more private area, perfect for a small gathering. Feel free to queue up some tunes using our TouchTunes jukebox!
             </p>
           </div>
         </div>
