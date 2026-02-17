@@ -1,0 +1,10 @@
+{
+    "items": {
+        "bootstrapCarousel": [
+            { 
+                "id": 1,
+                "_comment": "This is the JSON file for photos in the carousel in the About section. More coming soon"
+            }
+        ]
+    }
+}
