@@ -48,6 +48,23 @@ export default function Home() {
             </p>
           </div>
           <BootStrapCarousel />
+          <div className="space-y-0">
+            <h2 className="text-white text-3xl md:text-4xl font-bold italic underline mb-4 drop-shadow-2xl">Equipment List</h2>
+              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">- 13 Olhausen Competition tables & Olhausen Accu-Fast Competition rails</p>
+              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">- 1 Black PRC 9 Ft Diamond Billiards Pro-Am table</p>
+              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">- Simonis 860 Competition felt</p>
+              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">- Duffrin Canadian Maple House Cues</p>
+              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">- Master's Tan chalk</p>
+          </div>
+          <div className="space-y-0">
+            <h2 className="text-white text-3xl md:text-4xl font-bold italic underline mb-4 drop-shadow-2xl">Meet the LSB Team</h2>
+              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Tan Tran-Thien (Business Advisor)</p>
+              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">"Momma" Tran (General Manager)</p>
+              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">CJ Robinson (IT Specialist, Operations Manager)</p>
+              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Tp Tran-Thien (Marketing Specialist, Tournament Director)</p>
+              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Kento Vo (Employee)</p>
+              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">David Escobar (Employee, Tournament Director)</p>
+          </div>
         </div>
       </section>
       {/* Hours Section - Olive green background like pool table felt */}
