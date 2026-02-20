@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 export default function BootStrapCarousel() {
     const { bootstrapCarousel } = items;
     const [index, setIndex] = useState(0);
-    const handleSelect = (selectedIndex: number) => {
+    const handleSelect = (selectedIndex: number) => { 
         setIndex(selectedIndex);
     };
 
