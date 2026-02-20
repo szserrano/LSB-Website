@@ -1,5 +1,6 @@
 import Image from "next/image";
 import MapSection from "./components/MapSection";
+import BootStrapCarousel from "./components/BootStrapCarousel";
 
 export default function Home() {
   return (
@@ -46,6 +47,7 @@ export default function Home() {
               in a more private area, perfect for a small gathering. Feel free to queue up some tunes using our TouchTunes jukebox!
             </p>
           </div>
+          <BootStrapCarousel />
         </div>
       </section>
       {/* Hours Section - Olive green background like pool table felt */}

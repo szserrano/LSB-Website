@@ -3,7 +3,51 @@
         "bootstrapCarousel": [
             { 
                 "id": 1,
-                "_comment": "This is the JSON file for photos in the carousel in the About section. More coming soon"
+                "_comment": "This is the JSON file for photos in the carousel in the About section. More coming soon",
+                "imageURL": "/lsbaction1.jpeg",
+                "alt": "Pool Shot 1",
+                "title": "Welcome to Lucky Shot Billiards",
+                "body": "Sunnyvale's Premier Billiards Experience"
+            },
+            {
+                "id": 2,
+                "_comment": "This is the JSON file for photos in the carousel in the About section. More coming soon",
+                "imageURL": "/lsbaction2.jpeg",
+                "alt": "Pool Shot 2",
+                "title": "Welcome to Lucky Shot Billiards",
+                "body": "Sunnyvale's Premier Billiards Experience"
+            },
+            {
+                "id": 3,
+                "_comment": "This is the JSON file for photos in the carousel in the About section. More coming soon",
+                "imageURL": "/lsbcounter.jpeg",
+                "alt": "Counter Picture",
+                "title": "Welcome to Lucky Shot Billiards",
+                "body": "Sunnyvale's Premier Billiards Experience"
+            },  
+            {
+                "id": 4,
+                "_comment": "This is the JSON file for photos in the carousel in the About section. More coming soon",
+                "imageURL": "/lsbcrowd1.jpeg",
+                "alt": "Crowd 1",
+                "title": "Welcome to Lucky Shot Billiards",
+                "body": "Sunnyvale's Premier Billiards Experience"
+            },
+            {
+                "id": 5,
+                "_comment": "This is the JSON file for photos in the carousel in the About section. More coming soon",
+                "imageURL": "/lsbcrowd2.jpeg",
+                "alt": "Crowd 2",
+                "title": "Welcome to Lucky Shot Billiards",
+                "body": "Sunnyvale's Premier Billiards Experience"
+            },  
+            {
+                "id": 6,
+                "_comment": "This is the JSON file for photos in the carousel in the About section. More coming soon",
+                "imageURL": "/lsbtables.jpeg",
+                "alt": "O'Hausen tables",
+                "title": "Welcome to Lucky Shot Billiards",
+                "body": "Sunnyvale's Premier Billiards Experience"
             }
         ]
     }
