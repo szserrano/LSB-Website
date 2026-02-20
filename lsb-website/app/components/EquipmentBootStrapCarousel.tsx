@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { items } from "../../public/hallpics.json";
+import { items } from "../../public/equippics.json";
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 

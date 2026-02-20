@@ -1,6 +1,7 @@
 import Image from "next/image";
 import MapSection from "./components/MapSection";
 import BootStrapCarousel from "./components/BootStrapCarousel";
+import EquipmentBootStrapCarousel from "./components/EquipmentBootStrapCarousel";
 
 export default function Home() {
   return (
@@ -56,6 +57,7 @@ export default function Home() {
               <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">- Duffrin Canadian Maple House Cues</p>
               <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">- Master's Tan chalk</p>
           </div>
+          <EquipmentBootStrapCarousel />
           <div className="space-y-0">
             <h2 className="text-white text-3xl md:text-4xl font-bold italic underline mb-4 drop-shadow-2xl">Meet the LSB Team</h2>
               <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Tan Tran-Thien (Business Advisor)</p>
