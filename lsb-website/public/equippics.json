@@ -9,8 +9,16 @@
                 "title": "Welcome to Lucky Shot Billiards",
                 "body": "Equipment List"
             },
-            {
+            { 
                 "id": 2,
+                "_comment": "This is the JSON file for photos in the carousel in the About section. More coming soon",
+                "imageURL": "/lsbdiamond.jpeg",
+                "alt": "Diamond Billiards Table",
+                "title": "Welcome to Lucky Shot Billiards",
+                "body": "Equipment List"
+            },
+            {
+                "id": 3,
                 "_comment": "This is the JSON file for photos in the carousel in the About section. More coming soon",
                 "imageURL": "/olhausenrails.jpeg",
                 "alt": "Olhausen Rail",
@@ -18,7 +26,7 @@
                 "body": "Equipment List"
             },
             {
-                "id": 3,
+                "id": 4,
                 "_comment": "This is the JSON file for photos in the carousel in the About section. More coming soon",
                 "imageURL": "/simonis860felt.jpeg",
                 "alt": "Felt",
@@ -26,7 +34,7 @@
                 "body": "Equipment List"
             },  
             {
-                "id": 4,
+                "id": 5,
                 "_comment": "This is the JSON file for photos in the carousel in the About section. More coming soon",
                 "imageURL": "/masterstan.jpeg",
                 "alt": "Tan Chalk",
@@ -34,7 +42,7 @@
                 "body": "Equipment List"
             },
             {
-                "id": 5,
+                "id": 6,
                 "_comment": "This is the JSON file for photos in the carousel in the About section. More coming soon",
                 "imageURL": "/canadianmaple.jpeg",
                 "alt": "Canadian Maple House Cue",
