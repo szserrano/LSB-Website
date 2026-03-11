@@ -59,7 +59,7 @@ export default function Home() {
           </div>
           <EquipmentBootStrapCarousel />
           <div className="space-y-0">
-            <h2 className="text-white text-3xl md:text-4xl font-bold italic underline mb-4 drop-shadow-2xl">Meet the LSB Team</h2>
+            <h2 className="text-white text-3xl md:text-4xl font-bold italic underline mb-4 drop-shadow-2xl">Meet the LSB Team (Pictures Coming Soon!)</h2>
               <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Tan Tran-Thien (Business Advisor)</p>
               <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">"Momma" Tran (General Manager)</p>
               <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">CJ Robinson (IT Specialist, Operations Manager)</p>
