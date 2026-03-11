@@ -202,15 +202,25 @@ export default function Home() {
             </p>
             {/* Instagram link with better styling */}
             <div className="bg-red-950/50 backdrop-blur-sm rounded-xl p-6 shadow-md border border-red-800/50">
-              <p className="text-white/90 text-lg mb-3">Keep up to date with what's happening at Lucky Shot Billiards!</p>
-              <a 
-                href="https://www.instagram.com/luckyshotbilliards/" 
-                className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold" 
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Visit Our Instagram →
-              </a>
+              <p className="text-white/90 text-lg mb-4">Keep up to date with what's happening at Lucky Shot Billiards!</p>
+              <div className="flex flex-col items-center gap-4">
+                <a 
+                  href="https://www.instagram.com/luckyshotbilliards/" 
+                  className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visit Our Instagram →
+                </a>
+                <a 
+                  href="https://www.facebook.com/LuckyShotBilliards" 
+                  className="inline-block px-6 py-3 bg-[#1877F2] text-white rounded-lg hover:bg-[#166FE5] transition-all shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visit Our Facebook →
+                </a>
+              </div>
             </div>
             <p className="text-white text-xl font-semibold mt-8">Stop by and see us in person!</p>
             <MapSection />
