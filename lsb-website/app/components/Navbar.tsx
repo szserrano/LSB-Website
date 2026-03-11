@@ -41,10 +41,10 @@ export default function Navbar() {
           Hours
         </Link>
         <Link 
-          href="#tournaments" 
+          href="#tournaments/leagues" 
           className="!no-underline !text-white hover:!text-white hover:!bg-white/20 px-3 py-2 rounded-lg transition-all duration-200 font-medium"
         >
-          Tournaments
+          Tournaments/Leagues
         </Link>
         <Link 
           href="#prices" 

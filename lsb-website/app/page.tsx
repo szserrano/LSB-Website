@@ -98,10 +98,10 @@ export default function Home() {
         </div>
       </section>
       {/* Tournaments Section - Highlighted information cards */}
-      <section id="tournaments" className="min-h-screen w-full bg-gradient-to-br from-slate-800 to-slate-950 flex items-center justify-center py-20 pt-32 pb-20 px-4">
+      <section id="tournaments/leagues" className="min-h-screen w-full bg-gradient-to-br from-slate-800 to-slate-950 flex items-center justify-center py-20 pt-32 pb-20 px-4">
         <div className="flex flex-col items-center justify-center gap-8 max-w-4xl">
           <div className="text-center mb-4">
-            <h1 className="text-white text-5xl md:text-6xl font-bold mb-3">Tournaments</h1>
+            <h1 className="text-white text-5xl md:text-6xl font-bold mb-3">Tournaments & Leagues</h1>
             <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
           </div>
           <div className="flex items-center justify-center gap-8">
@@ -110,7 +110,21 @@ export default function Home() {
           </div>
           <div className="space-y-6">
             <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
-              We host weekly alternating 8-ball and 9-ball tournaments on Friday nights at 7:00 PM PST! More details per tournament will be posted on our Instagram page found in the contact section.
+              Bring your best game against LSB House Pros! We host weekly alternating 8-ball and 9-ball tournaments on Friday nights at 7:00 PM PST! Maximum 24 players per tournament. 
+            </p>
+            <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
+              Free practice starts at 6:00 PM PST before the tournament starts! Top 4 players will be paid out in cash prizes if there is a full bracket, top 2 players will be paid out in cash prizes if there are only 16 players.
+            </p>
+            <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
+              Call 408-739-7665 for more information and signups! More details per tournament will be posted on our Instagram page found in the contact section.
+            </p>
+            <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
+              We livestream the tournament matches on LSB Facebook at <a href="https://www.facebook.com/LuckyShotBilliards/videos" target="_blank" rel="noopener noreferrer" className="text-yellow-400 hover:text-yellow-300 transition-colors">www.facebook.com/LuckyShotBilliards/videos</a>
+            </p>
+            <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
+            <a href="https://www.snapmastergaming.com/v1.1.7/#/app/playlists" target="_blank" rel="noopener noreferrer">
+              Tournament Software
+            </a>
             </p>
             {/* Highlight boxes for important info */}
             <div className="grid md:grid-cols-2 gap-6 mt-8">
