@@ -30,8 +30,6 @@ export default function Home() {
             <h1 className="text-white text-5xl md:text-6xl font-bold mb-3">About Us</h1>
             <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
           </div>
-          {/* Image showing members of the 2025 Masters Champions */}
-          <Image src="/2025lsbmasterschamps.png" alt="Lucky Shot Billiards 2025 Masters Champions" width={1000} height={1000} className="rounded-lg shadow-2xl border-4 border-gray-200" />
           {/* Paragraphs with better spacing and readability */}
           <div className="space-y-6">
             <p className="text-white/90 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
@@ -129,18 +127,32 @@ export default function Home() {
             {/* Highlight boxes for important info */}
             <div className="grid md:grid-cols-2 gap-6 mt-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 shadow-lg">
-                <h3 className="text-yellow-400 font-bold text-xl mb-2">Entry Fee</h3>
+                <h3 className="!text-yellow-400 font-bold text-xl mb-2">Entry Fee</h3>
                 <p className="text-white text-2xl font-semibold">$15 per person</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 shadow-lg">
-                <h3 className="text-yellow-400 font-bold text-xl mb-2">Prize Pool</h3>
+                <h3 className="!text-yellow-400 font-bold text-xl mb-2">Prize Pool</h3>
                 <p className="text-white text-2xl font-semibold">Depends on player count</p>
               </div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 shadow-lg mt-4">
-              <h3 className="text-yellow-400 font-bold text-xl mb-2">Format</h3>
+              <h3 className="!text-yellow-400 font-bold text-xl mb-2">Format</h3>
               <p className="text-white text-lg">8-ball and 9-ball tournaments alternating each week</p>
             </div>
+            <h3 className="text-white text-lg md:text-xl text-center max-w-3xl leading-relaxed">APA 8-Ball & 9-Ball Leagues</h3>
+            <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
+            <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
+            Lucky Shot is the longest standing host location for APA & ASPA in the South Bay. With a 
+            reputation known to produce prestigious champions from APA 8-Ball, 9-Ball, and Master's 
+            Division, come on down and sign up to represent the LSB family.
+            </p>
+            <h3 className="text-white text-lg md:text-xl text-center max-w-3xl leading-relaxed">APA 14.1 Straight Pool League</h3>
+            <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
+            <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
+            We are the only location to offer an exclusive Straight Pool League (14:1) that has been 
+            around since 2003. Open to everyone, come down any given Tuesday to sign-up and give it a try.
+            </p>
+            <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed">Images of our league champions coming soon!</p>
           </div>
         </div>
       </section>
