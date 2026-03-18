@@ -30,6 +30,7 @@ export default function Home() {
             <h1 className="text-white text-5xl md:text-6xl font-bold mb-3">About Us</h1>
             <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
           </div>
+          <Image src="/lsbabout.jpeg" alt="Lucky Shot Billiards" width={700} height={200} className="rounded-lg shadow-2xl border-4 border-gray-200" />
           {/* Paragraphs with better spacing and readability */}
           <div className="space-y-6">
             <p className="text-white/90 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
@@ -152,7 +153,10 @@ export default function Home() {
             We are the only location to offer an exclusive Straight Pool League (14:1) that has been 
             around since 2003. Open to everyone, come down any given Tuesday to sign-up and give it a try.
             </p>
-            <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed">Images of our league champions coming soon!</p>
+            <div className="flex items-center justify-center gap-8">
+              <Image src="/trophy1.jpeg" alt="Trophy case 1" width={300} height={300} className="rounded-lg shadow-2xl border-4 border-gray-200" />
+              <Image src="/trophy2.jpeg" alt="Trophy case 2" width={300} height={300} className="rounded-lg shadow-2xl border-4 border-gray-200" />
+            </div>
           </div>
         </div>
       </section>
@@ -224,7 +228,7 @@ export default function Home() {
               </a>
             </div>
             <p className="text-white/90 text-lg max-w-2xl leading-relaxed">
-              We'll be happy to help you with any questions you may have.
+              We'll be happy to help you with any questions you may have about private events, parties, tournaments, and more.
             </p>
             {/* Instagram link with better styling */}
             <div className="bg-red-950/50 backdrop-blur-sm rounded-xl p-6 shadow-md border border-red-800/50">
