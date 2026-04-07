@@ -3,6 +3,23 @@ import MapSection from "./components/MapSection";
 import BootStrapCarousel from "./components/BootStrapCarousel";
 import EquipmentBootStrapCarousel from "./components/EquipmentBootStrapCarousel";
 
+const teamMembers = [
+  { name: "Tan Tran-Thien", role: "Business Advisor", image: null as string | null },
+  { name: '"Momma" Tran', role: "General Manager", image: null },
+  { name: "CJ Robinson", role: "IT Specialist, Operations Manager", image: null },
+  {
+    name: "Tp Tran-Thien",
+    role: "Marketing Specialist, Tournament Director",
+    image: "/tp.jpeg",
+  },
+  { name: "Kento Vo", role: "Employee", image: "/kento.jpeg" },
+  {
+    name: "David Escobar",
+    role: "Employee, Tournament Director",
+    image: null,
+  },
+] as const;
+
 export default function Home() {
   return (
     <div className="flex min-h-screen w-full flex-col items-center justify-center bg-zinc-50">
@@ -58,14 +75,45 @@ export default function Home() {
               <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">- Master's Tan chalk</p>
           </div>
           <EquipmentBootStrapCarousel />
-          <div className="space-y-0">
-            <h2 className="text-white text-3xl md:text-4xl font-bold italic underline mb-4 drop-shadow-2xl">Meet the LSB Team (Pictures Coming Soon!)</h2>
-              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Tan Tran-Thien (Business Advisor)</p>
-              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">"Momma" Tran (General Manager)</p>
-              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">CJ Robinson (IT Specialist, Operations Manager)</p>
-              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Tp Tran-Thien (Marketing Specialist, Tournament Director)</p>
-              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Kento Vo (Employee)</p>
-              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">David Escobar (Employee, Tournament Director)</p>
+          <div className="w-full max-w-6xl mx-auto">
+            <h2 className="text-white text-3xl md:text-4xl font-bold italic underline mb-8 text-center drop-shadow-2xl">
+              Meet the LSB Team
+            </h2>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 list-none p-0 m-0">
+              {teamMembers.map((member) => (
+                <li
+                  key={member.name}
+                  className="flex flex-col items-center text-center gap-3"
+                >
+                  {member.image ? (
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      width={280}
+                      height={280}
+                      className="w-full max-w-[280px] aspect-square object-cover rounded-lg shadow-2xl border-4 border-gray-200"
+                    />
+                  ) : (
+                    <div
+                      className="w-full max-w-[280px] aspect-square rounded-lg border-2 border-dashed border-white/30 bg-white/5 flex items-center justify-center px-4"
+                      aria-hidden
+                    >
+                      <span className="text-white/50 text-sm font-medium">
+                        Photo coming soon
+                      </span>
+                    </div>
+                  )}
+                  <div className="space-y-1 max-w-[280px]">
+                    <p className="text-white text-lg md:text-xl font-semibold drop-shadow-lg">
+                      {member.name}
+                    </p>
+                    <p className="text-white/85 text-base md:text-lg drop-shadow-md">
+                      {member.role}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
