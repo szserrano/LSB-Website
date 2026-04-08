@@ -4,7 +4,10 @@ import BootStrapCarousel from "./components/BootStrapCarousel";
 import EquipmentBootStrapCarousel from "./components/EquipmentBootStrapCarousel";
 
 const teamMembers = [
-  { name: "Tan Tran-Thien", role: "Business Advisor", image: null as string | null },
+  { name: "Tan Tran-Thien", 
+    role: "Business Advisor", 
+    image: "/tan.jpg" 
+  },
   { name: '"Momma" Tran', role: "General Manager", image: null },
   { name: "CJ Robinson", role: "IT Specialist, Operations Manager", image: null },
   {
