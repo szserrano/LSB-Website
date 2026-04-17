@@ -3,25 +3,48 @@ import MapSection from "./components/MapSection";
 import BootStrapCarousel from "./components/BootStrapCarousel";
 import EquipmentBootStrapCarousel from "./components/EquipmentBootStrapCarousel";
 
-const teamMembers = [
-  { name: "Tan Tran-Thien", 
-    role: "Business Advisor", 
-    image: "/tan.jpg" 
+type TeamMember = { name: string; role: string; image: string };
+
+const team = {
+  tan: {
+    name: "Tan Tran-Thien",
+    role: "Business Advisor",
+    image: "/tan.jpg",
   },
-  { name: '"Momma" Tran', role: "General Manager", image: null },
-  { name: "CJ Robinson", role: "IT Specialist, Operations Manager", image: null },
-  {
+  momma: {
+    name: '"Momma" Tran',
+    role: "General Manager",
+    image: "/mommatran.jpg",
+  },
+  tp: {
     name: "Tp Tran-Thien",
     role: "Marketing Specialist, Tournament Director",
     image: "/tp.jpeg",
   },
-  { name: "Kento Vo", role: "Employee", image: "/kento.jpeg" },
-  {
-    name: "David Escobar",
-    role: "Employee, Tournament Director",
-    image: null,
-  },
-] as const;
+  kento: { name: "Kento Vo", role: "Employee", image: "/kento.jpeg" },
+} as const satisfies Record<string, TeamMember>;
+
+function TeamMemberBlock({ member }: { member: TeamMember }) {
+  return (
+    <div className="flex w-full max-w-[280px] flex-col items-center gap-3 text-center">
+      <Image
+        src={member.image}
+        alt={member.name}
+        width={280}
+        height={280}
+        className="aspect-square w-full max-w-[280px] rounded-lg border-4 border-gray-200 object-cover shadow-2xl"
+      />
+      <div className="max-w-[280px] space-y-1">
+        <p className="text-lg font-semibold text-white drop-shadow-lg md:text-xl">
+          {member.name}
+        </p>
+        <p className="text-base text-white/85 drop-shadow-md md:text-lg">
+          {member.role}
+        </p>
+      </div>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
@@ -82,40 +105,17 @@ export default function Home() {
             <h2 className="text-white text-3xl md:text-4xl font-bold italic underline mb-8 text-center drop-shadow-2xl">
               Meet the LSB Team
             </h2>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 list-none p-0 m-0">
-              {teamMembers.map((member) => (
-                <li
-                  key={member.name}
-                  className="flex flex-col items-center text-center gap-3"
-                >
-                  {member.image ? (
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      width={280}
-                      height={280}
-                      className="w-full max-w-[280px] aspect-square object-cover rounded-lg shadow-2xl border-4 border-gray-200"
-                    />
-                  ) : (
-                    <div
-                      className="w-full max-w-[280px] aspect-square rounded-lg border-2 border-dashed border-white/30 bg-white/5 flex items-center justify-center px-4"
-                      aria-hidden
-                    >
-                      <span className="text-white/50 text-sm font-medium">
-                        Photo coming soon
-                      </span>
-                    </div>
-                  )}
-                  <div className="space-y-1 max-w-[280px]">
-                    <p className="text-white text-lg md:text-xl font-semibold drop-shadow-lg">
-                      {member.name}
-                    </p>
-                    <p className="text-white/85 text-base md:text-lg drop-shadow-md">
-                      {member.role}
-                    </p>
-                  </div>
-                </li>
-              ))}
+            <ul className="m-0 grid w-full list-none grid-cols-1 gap-10 p-0 md:grid-cols-3 md:items-start md:justify-items-center">
+              <li className="flex w-full justify-center">
+                <TeamMemberBlock member={team.tan} />
+              </li>
+              <li className="flex w-full flex-col items-center gap-10">
+                <TeamMemberBlock member={team.momma} />
+                <TeamMemberBlock member={team.kento} />
+              </li>
+              <li className="flex w-full justify-center">
+                <TeamMemberBlock member={team.tp} />
+              </li>
             </ul>
           </div>
         </div>
@@ -166,16 +166,16 @@ export default function Home() {
             {/* Highlight boxes for important info */}
             <div className="grid md:grid-cols-2 gap-6 mt-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 shadow-lg">
-                <h3 className="text-yellow-400 font-bold text-xl mb-2">Entry Fee</h3>
+                <h3 className="mb-2 text-xl font-bold !text-yellow-400">Entry Fee</h3>
                 <p className="text-white text-2xl font-semibold">$15 per person</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 shadow-lg">
-                <h3 className="text-yellow-400 font-bold text-xl mb-2">Prize Pool</h3>
+                <h3 className="mb-2 text-xl font-bold !text-yellow-400">Prize Pool</h3>
                 <p className="text-white text-2xl font-semibold">Depends on player count</p>
               </div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 shadow-lg mt-4">
-              <h3 className="text-yellow-400 font-bold text-xl mb-2">Format</h3>
+              <h3 className="mb-2 text-xl font-bold !text-yellow-400">Format</h3>
               <p className="text-white text-lg">8-ball and 9-ball tournaments alternating each week</p>
             </div>
           </div>
