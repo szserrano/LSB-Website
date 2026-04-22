@@ -1,5 +1,50 @@
 import Image from "next/image";
 import MapSection from "./components/MapSection";
+import BootStrapCarousel from "./components/BootStrapCarousel";
+import EquipmentBootStrapCarousel from "./components/EquipmentBootStrapCarousel";
+
+type TeamMember = { name: string; role: string; image: string };
+
+const team = {
+  tan: {
+    name: "Tan Tran-Thien",
+    role: "Business Advisor",
+    image: "/tan.jpg",
+  },
+  momma: {
+    name: '"Momma" Tran',
+    role: "General Manager",
+    image: "/mommatran.jpg",
+  },
+  tp: {
+    name: "Tp Tran-Thien",
+    role: "Marketing Specialist, Tournament Director",
+    image: "/tp.jpeg",
+  },
+  kento: { name: "Kento Vo", role: "Employee", image: "/kento.jpeg" },
+} as const satisfies Record<string, TeamMember>;
+
+function TeamMemberBlock({ member }: { member: TeamMember }) {
+  return (
+    <div className="flex w-full max-w-[280px] flex-col items-center gap-3 text-center">
+      <Image
+        src={member.image}
+        alt={member.name}
+        width={280}
+        height={280}
+        className="aspect-square w-full max-w-[280px] rounded-lg border-4 border-gray-200 object-cover shadow-2xl"
+      />
+      <div className="max-w-[280px] space-y-1">
+        <p className="text-lg font-semibold text-white drop-shadow-lg md:text-xl">
+          {member.name}
+        </p>
+        <p className="text-base text-white/85 drop-shadow-md md:text-lg">
+          {member.role}
+        </p>
+      </div>
+    </div>
+  );
+}
 
 export default function Home() {
   return (
@@ -28,16 +73,49 @@ export default function Home() {
             <h1 className="text-white text-5xl md:text-6xl font-bold mb-3">About Us</h1>
             <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
           </div>
-          {/* Image showing members of the 2025 Masters Champions */}
-          <Image src="/2025lsbmasterschamps.png" alt="Lucky Shot Billiards 2025 Masters Champions" width={1000} height={1000} className="rounded-lg shadow-2xl border-4 border-gray-200" />
+          <Image src="/lsbabout.jpeg" alt="Lucky Shot Billiards" width={700} height={200} className="rounded-lg shadow-2xl border-4 border-gray-200" />
           {/* Paragraphs with better spacing and readability */}
           <div className="space-y-6">
             <p className="text-white/90 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
-              Lucky Shot Billiards is a family-owned and operated billiards club proudly serving Sunnyvale, California for over 20 years. We are a proud member of the Billiards Congress of America (BCA) and the American Poolplayers Association (APA).
+              Lucky Shot Billiards Est. 1996 is a family-owned and operated billiards club proudly serving Sunnyvale, California 
+              for over 20 years. Boasting as the premiere location for pool in the South Bay, we are a proud member of the 
+              Billiards Congress of America (BCA) and the American Poolplayers Association (APA).
+
+              Lucky Shot also hosts a weekly tournament every Friday night, as well as catering for private
+              and corporate events! Check our tournament and contact sections for more information.
             </p>
             <p className="text-white/90 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
-              We offer a selection of snacks and drinks, along with 14 9-foot pool tables available for use and a 7-foot pool table paired with a dartboard in a more private area. Feel free to queue up some tunes using our TouchTunes jukebox!
+              Equipped with a dozen competition tables, a light Deli menu, and a giant selection of import & domestic beers,
+              we are the prime spot for recreation and league play. We also have a 7-foot pool table paired with a dartboard 
+              in a more private area, perfect for a small gathering. Feel free to queue up some tunes using our TouchTunes jukebox!
             </p>
+          </div>
+          <BootStrapCarousel />
+          <div className="space-y-0">
+            <h2 className="text-white text-3xl md:text-4xl font-bold italic underline mb-4 drop-shadow-2xl">Equipment List</h2>
+              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">- 13 Olhausen Competition tables & Olhausen Accu-Fast Competition rails</p>
+              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">- 1 Black PRC 9 Ft Diamond Billiards Pro-Am table</p>
+              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">- Simonis 860 Competition felt</p>
+              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">- Duffrin Canadian Maple House Cues</p>
+              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">- Master's Tan chalk</p>
+          </div>
+          <EquipmentBootStrapCarousel />
+          <div className="w-full max-w-6xl mx-auto">
+            <h2 className="text-white text-3xl md:text-4xl font-bold italic underline mb-8 text-center drop-shadow-2xl">
+              Meet the LSB Team
+            </h2>
+            <ul className="m-0 grid w-full list-none grid-cols-1 gap-10 p-0 md:grid-cols-3 md:items-start md:justify-items-center">
+              <li className="flex w-full justify-center">
+                <TeamMemberBlock member={team.tan} />
+              </li>
+              <li className="flex w-full flex-col items-center gap-10">
+                <TeamMemberBlock member={team.momma} />
+                <TeamMemberBlock member={team.kento} />
+              </li>
+              <li className="flex w-full justify-center">
+                <TeamMemberBlock member={team.tp} />
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -70,10 +148,10 @@ export default function Home() {
         </div>
       </section>
       {/* Tournaments Section - Highlighted information cards */}
-      <section id="tournaments" className="min-h-screen w-full bg-gradient-to-br from-slate-800 to-slate-950 flex items-center justify-center py-20 pt-32 pb-20 px-4">
+      <section id="tournaments/leagues" className="min-h-screen w-full bg-gradient-to-br from-slate-800 to-slate-950 flex items-center justify-center py-20 pt-32 pb-20 px-4">
         <div className="flex flex-col items-center justify-center gap-8 max-w-4xl">
           <div className="text-center mb-4">
-            <h1 className="text-white text-5xl md:text-6xl font-bold mb-3">Tournaments</h1>
+            <h1 className="text-white text-5xl md:text-6xl font-bold mb-3">Tournaments & Leagues</h1>
             <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
           </div>
           <div className="flex items-center justify-center gap-8">
@@ -82,22 +160,53 @@ export default function Home() {
           </div>
           <div className="space-y-6">
             <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
-              We host weekly alternating 8-ball and 9-ball tournaments on Friday nights at 7:00 PM PST! More details per tournament will be posted on our Instagram page found in the contact section.
+              Bring your best game against LSB House Pros! We host weekly alternating 8-ball and 9-ball tournaments on Friday nights at 7:00 PM PST! Maximum 24 players per tournament. 
+            </p>
+            <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
+              Free practice starts at 6:00 PM PST before the tournament starts! Top 4 players will be paid out in cash prizes if there is a full bracket, top 2 players will be paid out in cash prizes if there are only 16 players.
+            </p>
+            <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
+              Call 408-739-7665 for more information and signups! More details per tournament will be posted on our Instagram page found in the contact section.
+            </p>
+            <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
+              We livestream the tournament matches on LSB Facebook at <a href="https://www.facebook.com/LuckyShotBilliards/videos" target="_blank" rel="noopener noreferrer" className="text-yellow-400 hover:text-yellow-300 transition-colors">www.facebook.com/LuckyShotBilliards/videos</a>
+            </p>
+            <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
+            <a href="https://www.snapmastergaming.com/v1.1.7/#/app/playlists" target="_blank" rel="noopener noreferrer">
+              Tournament Software
+            </a>
             </p>
             {/* Highlight boxes for important info */}
             <div className="grid md:grid-cols-2 gap-6 mt-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 shadow-lg">
-                <h3 className="text-yellow-400 font-bold text-xl mb-2">Entry Fee</h3>
+                <h3 className="mb-2 text-xl font-bold !text-yellow-400">Entry Fee</h3>
                 <p className="text-white text-2xl font-semibold">$15 per person</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 shadow-lg">
-                <h3 className="text-yellow-400 font-bold text-xl mb-2">Prize Pool</h3>
+                <h3 className="mb-2 text-xl font-bold !text-yellow-400">Prize Pool</h3>
                 <p className="text-white text-2xl font-semibold">Depends on player count</p>
               </div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 shadow-lg mt-4">
-              <h3 className="text-yellow-400 font-bold text-xl mb-2">Format</h3>
+              <h3 className="mb-2 text-xl font-bold !text-yellow-400">Format</h3>
               <p className="text-white text-lg">8-ball and 9-ball tournaments alternating each week</p>
+            </div>
+            <h3 className="text-white text-lg md:text-xl text-center max-w-3xl leading-relaxed">APA 8-Ball & 9-Ball Leagues</h3>
+            <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
+            <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
+            Lucky Shot is the longest standing host location for APA & ASPA in the South Bay. With a 
+            reputation known to produce prestigious champions from APA 8-Ball, 9-Ball, and Master's 
+            Division, come on down and sign up to represent the LSB family.
+            </p>
+            <h3 className="text-white text-lg md:text-xl text-center max-w-3xl leading-relaxed">APA 14.1 Straight Pool League</h3>
+            <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
+            <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
+            We are the only location to offer an exclusive Straight Pool League (14:1) that has been 
+            around since 2003. Open to everyone, come down any given Tuesday to sign-up and give it a try.
+            </p>
+            <div className="flex items-center justify-center gap-8">
+              <Image src="/trophy1.jpeg" alt="Trophy case 1" width={300} height={300} className="rounded-lg shadow-2xl border-4 border-gray-200" />
+              <Image src="/trophy2.jpeg" alt="Trophy case 2" width={300} height={300} className="rounded-lg shadow-2xl border-4 border-gray-200" />
             </div>
           </div>
         </div>
@@ -170,19 +279,29 @@ export default function Home() {
               </a>
             </div>
             <p className="text-white/90 text-lg max-w-2xl leading-relaxed">
-              We'll be happy to help you with any questions you may have.
+              We'll be happy to help you with any questions you may have about private events, parties, tournaments, and more.
             </p>
             {/* Instagram link with better styling */}
             <div className="bg-red-950/50 backdrop-blur-sm rounded-xl p-6 shadow-md border border-red-800/50">
-              <p className="text-white/90 text-lg mb-3">Keep up to date with what's happening at Lucky Shot Billiards!</p>
-              <a 
-                href="https://www.instagram.com/luckyshotbilliards/" 
-                className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold" 
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Visit Our Instagram →
-              </a>
+              <p className="text-white/90 text-lg mb-4">Keep up to date with what's happening at Lucky Shot Billiards!</p>
+              <div className="flex flex-col items-center gap-4">
+                <a 
+                  href="https://www.instagram.com/luckyshotbilliards/" 
+                  className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visit Our Instagram →
+                </a>
+                <a 
+                  href="https://www.facebook.com/LuckyShotBilliards" 
+                  className="inline-block px-6 py-3 bg-[#1877F2] text-white rounded-lg hover:bg-[#166FE5] transition-all shadow-lg hover:shadow-xl transform hover:scale-105 font-semibold"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visit Our Facebook →
+                </a>
+              </div>
             </div>
             <p className="text-white text-xl font-semibold mt-8">Stop by and see us in person!</p>
             <MapSection />
