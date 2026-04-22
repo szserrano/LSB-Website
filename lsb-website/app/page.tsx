@@ -3,6 +3,49 @@ import MapSection from "./components/MapSection";
 import BootStrapCarousel from "./components/BootStrapCarousel";
 import EquipmentBootStrapCarousel from "./components/EquipmentBootStrapCarousel";
 
+type TeamMember = { name: string; role: string; image: string };
+
+const team = {
+  tan: {
+    name: "Tan Tran-Thien",
+    role: "Business Advisor",
+    image: "/tan.jpg",
+  },
+  momma: {
+    name: '"Momma" Tran',
+    role: "General Manager",
+    image: "/mommatran.jpg",
+  },
+  tp: {
+    name: "Tp Tran-Thien",
+    role: "Marketing Specialist, Tournament Director",
+    image: "/tp.jpeg",
+  },
+  kento: { name: "Kento Vo", role: "Employee", image: "/kento.jpeg" },
+} as const satisfies Record<string, TeamMember>;
+
+function TeamMemberBlock({ member }: { member: TeamMember }) {
+  return (
+    <div className="flex w-full max-w-[280px] flex-col items-center gap-3 text-center">
+      <Image
+        src={member.image}
+        alt={member.name}
+        width={280}
+        height={280}
+        className="aspect-square w-full max-w-[280px] rounded-lg border-4 border-gray-200 object-cover shadow-2xl"
+      />
+      <div className="max-w-[280px] space-y-1">
+        <p className="text-lg font-semibold text-white drop-shadow-lg md:text-xl">
+          {member.name}
+        </p>
+        <p className="text-base text-white/85 drop-shadow-md md:text-lg">
+          {member.role}
+        </p>
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
     <div className="flex min-h-screen w-full flex-col items-center justify-center bg-zinc-50">
@@ -57,14 +100,22 @@ export default function Home() {
               <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">- Master's Tan chalk</p>
           </div>
           <EquipmentBootStrapCarousel />
-          <div className="space-y-0">
-            <h2 className="text-white text-3xl md:text-4xl font-bold italic underline mb-4 drop-shadow-2xl">Meet the LSB Team (Pictures Coming Soon!)</h2>
-              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Tan Tran-Thien (Business Advisor)</p>
-              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">"Momma" Tran (General Manager)</p>
-              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">CJ Robinson (IT Specialist, Operations Manager)</p>
-              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Tp Tran-Thien (Marketing Specialist, Tournament Director)</p>
-              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Kento Vo (Employee)</p>
-              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">David Escobar (Employee, Tournament Director)</p>
+          <div className="w-full max-w-6xl mx-auto">
+            <h2 className="text-white text-3xl md:text-4xl font-bold italic underline mb-8 text-center drop-shadow-2xl">
+              Meet the LSB Team
+            </h2>
+            <ul className="m-0 grid w-full list-none grid-cols-1 gap-10 p-0 md:grid-cols-3 md:items-start md:justify-items-center">
+              <li className="flex w-full justify-center">
+                <TeamMemberBlock member={team.tan} />
+              </li>
+              <li className="flex w-full flex-col items-center gap-10">
+                <TeamMemberBlock member={team.momma} />
+                <TeamMemberBlock member={team.kento} />
+              </li>
+              <li className="flex w-full justify-center">
+                <TeamMemberBlock member={team.tp} />
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -128,16 +179,16 @@ export default function Home() {
             {/* Highlight boxes for important info */}
             <div className="grid md:grid-cols-2 gap-6 mt-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 shadow-lg">
-                <h3 className="!text-yellow-400 font-bold text-xl mb-2">Entry Fee</h3>
+                <h3 className="mb-2 text-xl font-bold !text-yellow-400">Entry Fee</h3>
                 <p className="text-white text-2xl font-semibold">$15 per person</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 shadow-lg">
-                <h3 className="!text-yellow-400 font-bold text-xl mb-2">Prize Pool</h3>
+                <h3 className="mb-2 text-xl font-bold !text-yellow-400">Prize Pool</h3>
                 <p className="text-white text-2xl font-semibold">Depends on player count</p>
               </div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 shadow-lg mt-4">
-              <h3 className="!text-yellow-400 font-bold text-xl mb-2">Format</h3>
+              <h3 className="mb-2 text-xl font-bold !text-yellow-400">Format</h3>
               <p className="text-white text-lg">8-ball and 9-ball tournaments alternating each week</p>
             </div>
             <h3 className="text-white text-lg md:text-xl text-center max-w-3xl leading-relaxed">APA 8-Ball & 9-Ball Leagues</h3>
