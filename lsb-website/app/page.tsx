@@ -73,8 +73,7 @@ export default function Home() {
             <h1 className="text-white text-5xl md:text-6xl font-bold mb-3">About Us</h1>
             <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
           </div>
-          {/* Image showing members of the 2025 Masters Champions */}
-          <Image src="/2025lsbmasterschamps.png" alt="Lucky Shot Billiards 2025 Masters Champions" width={1000} height={1000} className="rounded-lg shadow-2xl border-4 border-gray-200" />
+          <Image src="/lsbabout.jpeg" alt="Lucky Shot Billiards" width={700} height={200} className="rounded-lg shadow-2xl border-4 border-gray-200" />
           {/* Paragraphs with better spacing and readability */}
           <div className="space-y-6">
             <p className="text-white/90 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
@@ -149,10 +148,10 @@ export default function Home() {
         </div>
       </section>
       {/* Tournaments Section - Highlighted information cards */}
-      <section id="tournaments" className="min-h-screen w-full bg-gradient-to-br from-slate-800 to-slate-950 flex items-center justify-center py-20 pt-32 pb-20 px-4">
+      <section id="tournaments/leagues" className="min-h-screen w-full bg-gradient-to-br from-slate-800 to-slate-950 flex items-center justify-center py-20 pt-32 pb-20 px-4">
         <div className="flex flex-col items-center justify-center gap-8 max-w-4xl">
           <div className="text-center mb-4">
-            <h1 className="text-white text-5xl md:text-6xl font-bold mb-3">Tournaments</h1>
+            <h1 className="text-white text-5xl md:text-6xl font-bold mb-3">Tournaments & Leagues</h1>
             <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
           </div>
           <div className="flex items-center justify-center gap-8">
@@ -161,7 +160,21 @@ export default function Home() {
           </div>
           <div className="space-y-6">
             <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
-              We host weekly alternating 8-ball and 9-ball tournaments on Friday nights at 7:00 PM PST! More details per tournament will be posted on our Instagram page found in the contact section.
+              Bring your best game against LSB House Pros! We host weekly alternating 8-ball and 9-ball tournaments on Friday nights at 7:00 PM PST! Maximum 24 players per tournament. 
+            </p>
+            <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
+              Free practice starts at 6:00 PM PST before the tournament starts! Top 4 players will be paid out in cash prizes if there is a full bracket, top 2 players will be paid out in cash prizes if there are only 16 players.
+            </p>
+            <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
+              Call 408-739-7665 for more information and signups! More details per tournament will be posted on our Instagram page found in the contact section.
+            </p>
+            <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
+              We livestream the tournament matches on LSB Facebook at <a href="https://www.facebook.com/LuckyShotBilliards/videos" target="_blank" rel="noopener noreferrer" className="text-yellow-400 hover:text-yellow-300 transition-colors">www.facebook.com/LuckyShotBilliards/videos</a>
+            </p>
+            <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
+            <a href="https://www.snapmastergaming.com/v1.1.7/#/app/playlists" target="_blank" rel="noopener noreferrer">
+              Tournament Software
+            </a>
             </p>
             {/* Highlight boxes for important info */}
             <div className="grid md:grid-cols-2 gap-6 mt-8">
@@ -177,6 +190,23 @@ export default function Home() {
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 shadow-lg mt-4">
               <h3 className="mb-2 text-xl font-bold !text-yellow-400">Format</h3>
               <p className="text-white text-lg">8-ball and 9-ball tournaments alternating each week</p>
+            </div>
+            <h3 className="text-white text-lg md:text-xl text-center max-w-3xl leading-relaxed">APA 8-Ball & 9-Ball Leagues</h3>
+            <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
+            <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
+            Lucky Shot is the longest standing host location for APA & ASPA in the South Bay. With a 
+            reputation known to produce prestigious champions from APA 8-Ball, 9-Ball, and Master's 
+            Division, come on down and sign up to represent the LSB family.
+            </p>
+            <h3 className="text-white text-lg md:text-xl text-center max-w-3xl leading-relaxed">APA 14.1 Straight Pool League</h3>
+            <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
+            <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
+            We are the only location to offer an exclusive Straight Pool League (14:1) that has been 
+            around since 2003. Open to everyone, come down any given Tuesday to sign-up and give it a try.
+            </p>
+            <div className="flex items-center justify-center gap-8">
+              <Image src="/trophy1.jpeg" alt="Trophy case 1" width={300} height={300} className="rounded-lg shadow-2xl border-4 border-gray-200" />
+              <Image src="/trophy2.jpeg" alt="Trophy case 2" width={300} height={300} className="rounded-lg shadow-2xl border-4 border-gray-200" />
             </div>
           </div>
         </div>
@@ -249,7 +279,7 @@ export default function Home() {
               </a>
             </div>
             <p className="text-white/90 text-lg max-w-2xl leading-relaxed">
-              We'll be happy to help you with any questions you may have.
+              We'll be happy to help you with any questions you may have about private events, parties, tournaments, and more.
             </p>
             {/* Instagram link with better styling */}
             <div className="bg-red-950/50 backdrop-blur-sm rounded-xl p-6 shadow-md border border-red-800/50">
