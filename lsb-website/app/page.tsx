@@ -18,11 +18,22 @@ const team = {
   },
   tp: {
     name: "Tp Tran-Thien",
-    role: "Marketing Specialist, Tournament Director",
+    role: "Operations Lead & Tournament Director",
     image: "/tp.jpeg",
   },
   kento: { name: "Kento Vo", role: "Employee", image: "/kento.jpeg" },
+  johnny: { name: "Johnny Wilson", role: "Employee", image: "/johnny.jpeg" },
+  squid: { name: "Sydney Serrano", role: "Social Media Marketer", image: "/squid.jpeg" },
 } as const satisfies Record<string, TeamMember>;
+
+const teamMembers: TeamMember[] = [
+  team.tan,
+  team.momma,
+  team.tp,
+  team.kento,
+  team.johnny,
+  team.squid,
+];
 
 function TeamMemberBlock({ member }: { member: TeamMember }) {
   return (
@@ -86,7 +97,7 @@ export default function Home() {
             </p>
             <p className="text-white/90 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
               Equipped with a dozen competition tables, a light Deli menu, and a giant selection of import & domestic beers,
-              we are the prime spot for recreation and league play. We also have a 7-foot pool table paired with a dartboard 
+              we are the prime spot for recreation and league play. We also have a couple pro 8-foot pool tables paired with a dartboard 
               in a more private area, perfect for a small gathering. Feel free to queue up some tunes using our TouchTunes jukebox!
             </p>
           </div>
@@ -104,17 +115,12 @@ export default function Home() {
             <h2 className="text-white text-3xl md:text-4xl font-bold italic underline mb-8 text-center drop-shadow-2xl">
               Meet the LSB Team
             </h2>
-            <ul className="m-0 grid w-full list-none grid-cols-1 gap-10 p-0 md:grid-cols-3 md:items-start md:justify-items-center">
-              <li className="flex w-full justify-center">
-                <TeamMemberBlock member={team.tan} />
-              </li>
-              <li className="flex w-full flex-col items-center gap-10">
-                <TeamMemberBlock member={team.momma} />
-                <TeamMemberBlock member={team.kento} />
-              </li>
-              <li className="flex w-full justify-center">
-                <TeamMemberBlock member={team.tp} />
-              </li>
+            <ul className="m-0 grid w-full list-none grid-cols-1 gap-8 p-0 place-items-center sm:grid-cols-2 lg:grid-cols-3">
+              {teamMembers.map((member) => (
+                <li key={member.name} className="flex w-full justify-center">
+                  <TeamMemberBlock member={member} />
+                </li>
+              ))}
             </ul>
           </div>
         </div>
