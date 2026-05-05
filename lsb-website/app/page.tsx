@@ -166,7 +166,7 @@ export default function Home() {
           </div>
           <div className="space-y-6">
             <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
-              Bring your best game against LSB House Pros! We host weekly alternating 8-ball and 9-ball tournaments on Friday nights at 7:00 PM PST! Maximum 24 players per tournament. 
+              Bring your best game against LSB House Pros! We host weekly alternating 8-ball and 9-ball tournaments on Friday nights at 7:00 PM PST!</p> <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed font-bold"> Maximum 24 players per 8-ball tournament and 32 players per 9-ball tournament. 
             </p>
             <p className="text-white/95 text-lg md:text-xl text-center max-w-3xl leading-relaxed">
               Free practice starts at 6:00 PM PST before the tournament starts! Top 4 players will be paid out in cash prizes if there is a full bracket, top 2 players will be paid out in cash prizes if there are only 16 players.
@@ -186,7 +186,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-6 mt-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 shadow-lg">
                 <h3 className="mb-2 text-xl font-bold !text-yellow-400">Entry Fee</h3>
-                <p className="text-white text-2xl font-semibold">$15 per person</p>
+                <p className="text-white text-2xl font-semibold">$20 per person</p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 shadow-lg">
                 <h3 className="mb-2 text-xl font-bold !text-yellow-400">Prize Pool</h3>
@@ -237,7 +237,6 @@ export default function Home() {
             <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Hot Dogs.. $6.00</p>
             <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Corn Dogs.. $6.00</p>
             <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Chicken Bake.. $6.00</p>
-            <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Nachos.. $6.00</p>
             <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Cup of Noodles.. $6.00</p>
           <h2 className="text-white text-3xl md:text-4xl font-bold italic underline mb-4 drop-shadow-2xl">Drinks</h2>
             <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">Water & Soda.. $2.00</p>
