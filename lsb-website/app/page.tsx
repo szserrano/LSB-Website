@@ -214,6 +214,16 @@ export default function Home() {
               <Image src="/trophy1.jpeg" alt="Trophy case 1" width={300} height={300} className="rounded-lg shadow-2xl border-4 border-gray-200" />
               <Image src="/trophy2.jpeg" alt="Trophy case 2" width={300} height={300} className="rounded-lg shadow-2xl border-4 border-gray-200" />
             </div>
+            <h3 className="text-white text-lg md:text-xl text-center max-w-3xl leading-relaxed">Featured House Teams</h3>
+            <div className="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
+            <div className="space-y-0">
+              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">- Cobra Kai (8-ball/9-ball)</p>
+              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">- Put It On the Table (Masters)</p>
+              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">- Shafted Again (Masters)</p>
+              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">- Bad Decisions (Masters)</p>
+              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">- Lucky Dawgs (9-ball)</p>
+              <p className="text-white text-xl md:text-2xl drop-shadow-lg mb-4">- Team 1 (8-ball)</p>
+            </div>
           </div>
         </div>
       </section>
